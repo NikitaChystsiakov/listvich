@@ -1,0 +1,13 @@
+.DS_Store
+.vercel
+.env*
+
+# рабочие материалы и заметки по клиенту: только локально
+.art-director/
+.playwright-mcp/
+ПЛАН.md
+Готовые проекты из других сфер для референса и копирования кода/
+
+# не используется на сайте
+site/vendor/gsap.min.js
+site/vendor/ScrollTrigger.min.js

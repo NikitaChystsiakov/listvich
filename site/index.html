@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Листвич — хозблоки и дачные домики от производителя, Минск</title>
+<meta name="description" content="Соберите хозблок в конструкторе: размер, терраса, дровник, сваи, покраска — цена считается сразу. Своё производство в Минске, сборка на участке за 15–20 рабочих дней.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2B211B">
+<link rel="icon" href="img/logo.webp">
+<link rel="preload" href="fonts/geo-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/golos-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#top" aria-label="Листвич — на главную"><img src="img/logo.webp" alt="Листвич" width="385" height="290"></a>
+    <nav class="nav" id="nav" aria-label="Разделы">
+      <a href="#catalog" data-filter="hozblok">Хозблоки</a>
+      <a href="#catalog" data-filter="domik">Дачные домики</a>
+      <a href="#catalog" data-filter="banya">Бани</a>
+      <a href="#catalog" data-filter="besedka">Беседки и вольеры</a>
+      <a href="#steps">Как работаем</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <span class="sp"></span>
+    <a class="hdr-phone" href="tel:+375298059997"><small>Звоните или пишите</small>+375 29 805-99-97</a>
+    <a class="btn btn-viber hdr-viber" href="viber://chat?number=%2B375298059997" data-viber><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.9 2 3.2 3.6 3.2 9.6v2.3c0 3.7 1.4 5.8 3.8 6.8v2.5c0 .6.7.9 1.1.5l2.3-2.3c.5 0 1 .1 1.6.1 5.1 0 8.8-1.6 8.8-7.6V9.6C20.8 3.6 17.1 2 12 2Zm4.4 13.1-.8.8c-.6.5-1.9.3-3.7-.9a13.7 13.7 0 0 1-3.8-4.1C7.2 9.3 7 8 7.5 7.4l.8-.8c.3-.3.8-.3 1.1 0l1 1.2c.3.3.3.8 0 1.1l-.5.5c.4 1 1.7 2.5 2.9 3l.5-.5c.3-.3.8-.3 1.1 0l1.3 1c.4.4.4.9.2 1.2Z"/></svg><span>Viber</span></a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. Конструктор -->
+<section class="cfg" id="cfg" aria-labelledby="cfg-h">
+  <div class="cfg-stage" id="stage">
+    <div class="cfg-head">
+      <h1 id="cfg-h">Соберите хозблок&nbsp;—<br><em>цена считается сразу</em></h1>
+      <p>Своё производство в Минске. Привезём готовый или соберём на участке за&nbsp;15–20 рабочих дней. До&nbsp;30&nbsp;км от&nbsp;МКАД — бесплатно.</p>
+    </div>
+    <div class="cfg-hint" id="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10M7 12l3-3M7 12l3 3M17 12l-3-3M17 12l-3 3"/></svg>Потяните, чтобы обойти вокруг</div>
+    <div class="cfg-like" id="like" aria-live="polite"></div>
+  </div>
+
+  <form class="cfg-panel" id="panel" aria-label="Конструктор" onsubmit="return false">
+    <div class="grp">
+      <div class="seg" role="radiogroup" aria-label="Что строим" id="kind">
+        <button type="button" role="radio" aria-checked="true" data-v="hoz">Хозблок</button>
+        <button type="button" role="radio" aria-checked="false" data-v="dom">Дачный домик <small>утеплённый</small></button>
+      </div>
+    </div>
+
+    <div class="grp">
+      <div class="grp-h"><h3>Длина</h3><output id="lenOut">6 м</output></div>
+      <div class="range"><input type="range" id="len" min="3" max="8" step="0.5" value="6" aria-label="Длина, м"><div class="range-ticks"><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8 м</span></div></div>
+      <div class="grp-h mt"><h3>Ширина</h3></div>
+      <div class="chips" id="wid" role="radiogroup" aria-label="Ширина, м"></div>
+    </div>
+
+    <div class="grp">
+      <div class="grp-h"><h3>Что пристроить</h3></div>
+      <div class="line col"><span>Терраса под общей крышей</span><div class="chips sm" id="ter" role="radiogroup" aria-label="Терраса"></div></div>
+      <label class="line tgl"><span>Дровник с торца <small data-p="drv"></small></span><input type="checkbox" id="drv"><i></i></label>
+      <div class="line"><span>Отдельных помещений <small>склад, душ, санузел</small></span><div class="step" data-k="rooms"><button type="button" aria-label="Меньше">−</button><output>1</output><button type="button" aria-label="Больше">+</button></div></div>
+    </div>
+
+    <div class="grp">
+      <div class="grp-h"><h3>Окна и двери</h3></div>
+      <div class="line"><span>Окон</span><div class="step" data-k="windows"><button type="button" aria-label="Меньше">−</button><output>1</output><button type="button" aria-label="Больше">+</button></div></div>
+      <label class="line tgl"><span>Окна ПВХ вместо деревянных <small data-p="pvc"></small></span><input type="checkbox" id="pvc"><i></i></label>
+      <label class="line tgl"><span>Распашные двери под технику <small data-p="dbl"></small></span><input type="checkbox" id="dbl"><i></i></label>
+    </div>
+
+    <div class="grp">
+      <div class="grp-h"><h3>Основание и отделка</h3></div>
+      <label class="line tgl"><span>Винтовые сваи вместо блоков <small data-p="pil"></small></span><input type="checkbox" id="pil"><i></i></label>
+      <label class="line tgl" id="gklRow"><span>Внутри влагостойкий гипсокартон <small data-p="gkl"></small></span><input type="checkbox" id="gkl"><i></i></label>
+      <label class="line tgl"><span>Водосток <small data-p="gut"></small></span><input type="checkbox" id="gut"><i></i></label>
+    </div>
+
+    <div class="grp">
+      <div class="grp-h"><h3>Покраска Vidaron</h3><output id="paintOut">Без покраски</output></div>
+      <div class="swatches" id="paint" role="radiogroup" aria-label="Цвет покраски"></div>
+    </div>
+
+    <div class="total" id="total">
+      <div class="total-top">
+        <div><small>Ориентировочно, с доставкой до 30 км</small><div class="num" id="sum" aria-live="polite">5 900 BYN</div></div>
+        <button type="button" class="total-more" id="moreBtn" aria-expanded="false">Из чего цена</button>
+      </div>
+      <ul class="total-list" id="sumList" hidden></ul>
+      <p class="total-opt" id="optCount"></p>
+      <button type="button" class="btn btn-amber btn-wide" data-open-lead>Отправить комплектацию</button>
+      <p class="total-note">Точную цену Артур посчитает после звонка</p>
+    </div>
+  </form>
+
+  <div class="mbar" id="mbar"><div><small>Ориентировочно</small><b id="mSum">5 900 BYN</b></div><button type="button" class="btn btn-amber" data-open-lead>Отправить</button></div>
+</section>
+
+<!-- 2. Что входит -->
+<section class="inc band-oak" id="inc" aria-labelledby="inc-h">
+  <div class="wrap inc-grid">
+    <div class="inc-text reveal">
+      <h2 id="inc-h">Что уже входит<br>в цену хозблока</h2>
+      <p>Без «потом доплатите за фундамент». <span class="hv">Наведите на строку</span><span class="tp">Нажмите на строку</span> — покажем, где это в стене.</p>
+      <dl class="inc-list" id="incList">
+        <div data-l="1"><dt><i>1</i>Фундамент</dt><dd>столбчатый из блоков</dd></div>
+        <div data-l="2"><dt><i>2</i>Обвязка</dt><dd>брус 100×150 мм</dd></div>
+        <div data-l="3"><dt><i>3</i>Пол</dt><dd>лаги 50×100, обрезная доска 25 мм</dd></div>
+        <div data-l="4"><dt><i>4</i>Каркас</dt><dd>брус 40×100 или 50×100 мм</dd></div>
+        <div data-l="5"><dt><i>5</i>Фасад</dt><dd>имитация бруса 20 мм, класс В</dd></div>
+        <div data-l="6"><dt><i>6</i>Кровля</dt><dd>металлопрофиль МП-20 0,4 мм</dd></div>
+        <div data-l="7"><dt><i>7</i>Окно и дверь</dt><dd>деревянное окно 600×600, дверь</dd></div>
+        <div data-l="0"><dt><i>✓</i>Доставка</dt><dd>до 30 км от МКАД — входит</dd></div>
+        <div data-l="0"><dt><i>✓</i>Сборка</dt><dd>на участке, проект правим под вас — входит</dd></div>
+      </dl>
+    </div>
+    <div class="inc-pic reveal" aria-hidden="true">
+      <svg viewBox="0 0 560 460" id="section">
+        <defs>
+          <pattern id="boards" width="20" height="14" patternUnits="userSpaceOnUse"><rect width="20" height="14" fill="#D9B47A"/><rect y="12" width="20" height="2" fill="#A27A44"/></pattern>
+          <pattern id="ribs" width="16" height="10" patternUnits="userSpaceOnUse"><rect width="16" height="10" fill="#5A5E61"/><rect width="4" height="10" fill="#777B7E"/></pattern>
+        </defs>
+        <line x1="0" y1="420" x2="560" y2="420" class="gl"/>
+        <g data-l="1" class="ly"><rect x="44" y="370" width="70" height="50" rx="3"/><rect x="245" y="370" width="70" height="50" rx="3"/><rect x="446" y="370" width="70" height="50" rx="3"/></g>
+        <g data-l="2" class="ly"><rect x="30" y="338" width="500" height="32"/></g>
+        <g data-l="3" class="ly"><rect x="30" y="328" width="500" height="10"/><rect x="60" y="338" width="10" height="32" opacity=".5"/></g>
+        <g data-l="4" class="ly"><rect x="34" y="108" width="12" height="220"/><rect x="128" y="104" width="12" height="224"/><rect x="222" y="100" width="12" height="228"/><rect x="316" y="96" width="12" height="232"/><rect x="410" y="92" width="12" height="236"/><rect x="514" y="88" width="12" height="240"/><path d="M30 108 530 84v10L30 118Z"/></g>
+        <g data-l="5" class="ly"><path d="M272 99 530 87v241H272Z" fill="url(#boards)"/></g>
+        <g data-l="7" class="ly"><rect x="352" y="160" width="74" height="74" rx="2"/><rect x="361" y="169" width="56" height="56" fill="#5E7684"/><rect x="140" y="148" width="62" height="180" rx="2"/></g>
+        <g data-l="6" class="ly"><path d="M8 96 552 70v14L8 110Z" fill="url(#ribs)"/></g>
+        <g class="nums">
+          <g data-l="1"><circle cx="79" cy="395" r="13"/><text x="79" y="400">1</text></g>
+          <g data-l="2"><circle cx="190" cy="354" r="13"/><text x="190" y="359">2</text></g>
+          <g data-l="3"><circle cx="240" cy="315" r="13"/><text x="240" y="320">3</text></g>
+          <g data-l="4"><circle cx="87" cy="230" r="13"/><text x="87" y="235">4</text></g>
+          <g data-l="5"><circle cx="480" cy="270" r="13"/><text x="480" y="275">5</text></g>
+          <g data-l="6"><circle cx="300" cy="60" r="13"/><text x="300" y="65">6</text></g>
+          <g data-l="7"><circle cx="389" cy="255" r="13"/><text x="389" y="260">7</text></g>
+        </g>
+      </svg>
+      <p class="inc-cap">Слева обшивку сняли, чтобы был виден каркас</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Каталог -->
+<section class="cat" id="catalog" aria-labelledby="cat-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="cat-h">Уже строили — <span id="catCount">34</span> постройки</h2>
+      <p>Реальные заказы с участков наших клиентов. Откройте любую — увидите спецификацию и сможете собрать похожую в конструкторе.</p>
+    </div>
+    <div class="filters" id="filters" role="tablist" aria-label="Тип постройки"></div>
+    <div class="wall" id="wall"></div>
+  </div>
+</section>
+
+<!-- 4. Когда будет готово -->
+<section class="steps" id="steps" aria-labelledby="steps-h">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="steps-h">Когда хозблок<br>будет у вас</h2><p>Считаем по рабочим дням от сегодняшнего числа: сначала звонок и точный расчёт, потом 15–20 рабочих дней на нашем производстве на ул. Рыбалко, 17.</p></div>
+    <div class="when-box reveal">
+      <div class="when-side">
+        <p class="when-big">Если оставить заявку сегодня&nbsp;— готово <b id="calRange"></b></p>
+        <div class="when-q"><span>К участку может подъехать машина?</span>
+          <div class="seg seg-d" role="radiogroup" id="road" aria-label="Подъезд к участку"><button type="button" role="radio" data-v="yes" aria-checked="true">Да</button><button type="button" role="radio" data-v="no" aria-checked="false">Нет, узко</button></div>
+        </div>
+        <p class="when-txt" id="roadTxt"></p>
+        <ul class="when-leg"><li><i class="lg is-call"></i>Перезваниваем, считаем точно</li><li><i class="lg is-make"></i>Делаем на производстве</li><li><i class="lg is-ready"></i>Привозим или собираем</li></ul>
+      </div>
+      <div class="cal-wrap"><div class="cal-dow"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div><div class="cal" id="cal"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Отзывы -->
+<section class="revs band-pine" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 id="rev-h">Что пишут после сдачи</h2><p>Переписки из нашего Instagram <a href="https://www.instagram.com/listvichminsk/" target="_blank" rel="noopener">@listvichminsk</a> — как есть.</p></div>
+  </div>
+  <div class="rev-track" id="revTrack" tabindex="0" aria-label="Отзывы, листайте"></div>
+  <div class="wrap rev-ctrl"><button type="button" class="arr" data-dir="-1" aria-label="Назад">←</button><button type="button" class="arr" data-dir="1" aria-label="Вперёд">→</button></div>
+</section>
+
+<!-- 6. Заявка и контакты -->
+<section class="lead band-oak" id="contacts" aria-labelledby="lead-h">
+  <div class="wrap lead-grid">
+    <div class="lead-tag reveal" id="leadTagBox">
+      <div class="tagw" id="tagw"><div class="tag-str"></div>
+        <div class="tag" id="tag">
+          <small>Ваша комплектация</small>
+          <b class="tag-name" id="tagName">Хозблок 6×3</b>
+          <ul id="tagList"></ul>
+          <div class="tag-sum"><span>Ориентировочно</span><b id="tagSum">5 900 BYN</b></div>
+          <a href="#cfg" class="tag-edit">Изменить в конструкторе</a>
+        </div>
+      </div>
+    </div>
+    <div class="lead-form reveal">
+      <h2 id="lead-h">Отправьте комплектацию —<br>Артур досчитает точно</h2>
+      <form id="leadForm" novalidate>
+        <div class="fl two"><label><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+        <label><span>Телефон <em>*</em></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+375 (__) ___-__-__" required></label></div>
+        <div class="fl"><label><span>Куда везти</span><input name="place" placeholder="Населённый пункт или район"></label></div>
+        <div class="fl"><span class="lbl">Когда нужен</span><div class="chips when" id="when" role="radiogroup" aria-label="Когда нужен"><button type="button" class="chip" data-v="Как можно скорее">Как можно скорее</button><button type="button" class="chip" data-v="В этом месяце">В этом месяце</button><button type="button" class="chip" data-v="К весне">К весне</button><button type="button" class="chip" data-v="Пока прицениваюсь">Пока прицениваюсь</button></div></div>
+        <div class="fl"><label><span>Комментарий</span><textarea name="note" rows="2" placeholder="Например: узкий заезд, нужен цвет как у дома"></textarea></label></div>
+        <div class="lead-act">
+          <button class="btn btn-amber" type="submit">Отправить заявку</button>
+          <a class="btn btn-ghost-l" href="viber://chat?number=%2B375298059997" data-viber>Отправить в Viber</a>
+        </div>
+        <p class="lead-err" id="leadErr" role="alert"></p>
+      </form>
+      <div class="lead-ok" id="leadOk" hidden>
+        <h3>Заявка у нас</h3>
+        <p>Артур посмотрит комплектацию, перезвонит и посчитает точно. Если удобнее, напишите в Viber — комплектация уже скопирована.</p>
+        <p class="demo-note">Это прототип: заявка показана только на экране.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap contacts">
+    <div><h3>Телефоны</h3><a href="tel:+375298059997">+375 29 805-99-97</a><a href="tel:+375257029997">+375 25 702-99-97</a></div>
+    <div><h3>Мессенджеры</h3><a href="viber://chat?number=%2B375298059997" data-viber>Viber</a><a href="https://www.instagram.com/listvichminsk/" target="_blank" rel="noopener">Instagram @listvichminsk</a></div>
+    <div><h3>Офис</h3><p>Минск, пр. Дзержинского, 69, корп. 2, пом. 49, ком. 123</p></div>
+    <div><h3>Производство</h3><p>Минск, ул. Рыбалко, 17</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <img src="img/logo.webp" alt="Листвич" width="385" height="290">
+    <p>ООО «Листвич», УНП 193371758<br>Хозблоки, дачные домики, бани, беседки и вольеры по всей Беларуси</p>
+    <nav aria-label="Разделы в подвале"><a href="#cfg">Конструктор</a><a href="#catalog">Наши постройки</a><a href="#steps">Как работаем</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+    <p class="ftr-note">Прототип сайта. Цены в конструкторе ориентировочные: посчитаны по карточкам listvich.by.</p>
+  </div>
+</footer>
+
+<!-- Карточка постройки -->
+<dialog class="pd" id="pd" aria-labelledby="pdTitle">
+  <button class="pd-x" type="button" data-close aria-label="Закрыть">×</button>
+  <div class="pd-gal"><img id="pdImg" alt=""><div class="pd-thumbs" id="pdThumbs"></div></div>
+  <div class="pd-body">
+    <h3 id="pdTitle"></h3>
+    <div class="pd-price" id="pdPrice"></div>
+    <ul class="pd-spec" id="pdSpec"></ul>
+    <div class="pd-act">
+      <button type="button" class="btn btn-amber" id="pdCfg">Собрать похожий в конструкторе</button>
+      <button type="button" class="btn btn-ghost" id="pdLead">Хочу такой же</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="data.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
